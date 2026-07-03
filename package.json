@@ -1,0 +1,19 @@
+{
+  "name": "Hospital_Project",
+  "version": "1.0.0",
+  "description": "Node.js MySQL example project for hospital_db using mysql2 and CommonJS",
+  "main": "dbhospital.js",
+  "scripts": {
+    "doctor": "node doctor.js",
+    "patient": "node patient.js",
+    "staff": "node staff.js",
+    "display": "node display.js",
+    "delete": "node delete.js",
+    "specific": "node specific.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.6.0"
+  }
+}
