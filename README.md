@@ -1,89 +1,136 @@
-# Hospital_Project
+# 🏥 Hospital Management System
 
-Node.js MySQL example project (CommonJS) demonstrating simple CRUD-style operations against a MySQL database named `hospital_db` using the `mysql2` package.
+A full-stack Hospital Management System developed using **Node.js**, **Express.js**, and **SQL** to simplify hospital operations such as patient management, doctor management, appointments, and database handling.
 
-**Project Structure**
+## 📌 Features
 
-- Hospital_Project/
-- node_modules/ (created after `npm install`)
-- package.json
-- package-lock.json
-- dbhospital.js        - creates and exports the DB connection
-- doctor.js            - inserts sample doctors
-- patient.js           - inserts sample patients
-- staff.js             - inserts sample staff members
-- display.js           - retrieves and displays all records (console.table)
-- delete.js            - deletes specified records and prints counts
-- specific.js          - runs specific SELECT queries and displays results
-- README.md
+* 👨‍⚕️ Doctor Management
 
-Note: The project assumes that the `hospital_db` database and the tables `doctor`, `patient`, and `staff` already exist with appropriate columns.
+  * Add new doctors
+  * View doctor details
+  * Update doctor information
+  * Delete doctor records
 
-Installation
-------------
+* 🧑‍🤝‍🧑 Patient Management
 
-1. Open a terminal in the `Hospital_Project` folder.
-2. Install dependencies:
+  * Register new patients
+  * View patient details
+  * Update patient records
+  * Delete patient information
+
+* 📅 Appointment Management
+
+  * Book appointments
+  * View appointment schedules
+  * Manage appointment details
+
+* 🗄️ Database Integration
+
+  * SQL database connectivity
+  * Efficient CRUD operations
+  * Structured data storage and retrieval
+
+## 🛠️ Technologies Used
+
+* **Node.js**
+* **Express.js**
+* **SQL Database**
+* **HTML**
+* **CSS**
+* **JavaScript**
+
+## 📂 Project Structure
+
+```text
+Hospital-Management/
+│
+├── routes/
+├── controllers/
+├── models/
+├── views/
+├── public/
+├── database/
+├── index.js
+├── package.json
+└── README.md
+```
+
+## ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/koushik-ops/Hospital-Management.git
+```
+
+### 2️⃣ Navigate to the project directory
+
+```bash
+cd Hospital-Management
+```
+
+### 3️⃣ Install dependencies
 
 ```bash
 npm install
 ```
 
-This will install `mysql2` per `package.json`. Alternatively you can run:
+### 4️⃣ Configure the database
+
+Create your SQL database and update the database configuration details in the project files.
+
+### 5️⃣ Start the application
 
 ```bash
-npm install mysql2
+npm start
 ```
 
-Configuration
--------------
-
-Edit `dbhospital.js` and replace `YOUR_PASSWORD` with your MySQL `root` password if needed. The connection settings are:
-
-- Host: `localhost`
-- User: `root`
-- Password: `YOUR_PASSWORD` (update before running)
-- Database: `hospital_db`
-
-Running the scripts
--------------------
-
-Each file is independently executable. From the project folder run:
+or
 
 ```bash
-node doctor.js    # inserts doctors
-node patient.js   # inserts patients
-node staff.js     # inserts staff members
-node display.js   # displays all records using console.table
-node delete.js    # deletes the specified rows and prints counts
-node specific.js  # runs and displays the specific SELECT queries
+node index.js
 ```
 
-Alternatively use the npm scripts:
+## 🚀 Usage
 
-```bash
-npm run doctor
-npm run patient
-npm run staff
-npm run display
-npm run delete
-npm run specific
+1. Start the server.
+2. Open your browser.
+3. Access the application using:
+
+```text
+http://localhost:3000
 ```
 
-Expected output
----------------
+4. Perform hospital management operations through the application interface.
 
-- On successful DB connection: `Database Connected Successfully`.
-- `doctor.js`, `patient.js`, `staff.js` print messages indicating number of rows inserted.
-- `display.js` prints three sections with headings and tables: `===== DOCTORS =====`, `===== PATIENTS =====`, `===== STAFF =====` using `console.table()`.
-- `delete.js` prints how many rows were deleted for each table (e.g. `Deleted doctors: 1`).
-- `specific.js` prints the requested columns in table format with headings.
+## 📖 Learning Objectives
 
-Notes and error handling
-------------------------
+This project demonstrates:
 
-- Each script implements basic error handling: SQL errors print an error message.
-- Each script closes the DB connection with `connection.end()` after finishing.
-- If the connection fails, the scripts exit with a non-zero code.
+* Express.js server creation
+* SQL database connectivity
+* CRUD operations
+* RESTful routing
+* Backend application structure
+* Database management concepts
 
-If you want help creating the `hospital_db` schema or the tables, tell me and I can provide example CREATE TABLE statements.
+## 🔮 Future Enhancements
+
+* User authentication and authorization
+* Role-based access control
+* Online payment integration
+* Email notifications
+* Medical report management
+* Dashboard analytics
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+## 📜 License
+
+This project is intended for educational and learning purposes.
+
+## 👨‍💻 Author
+
+Developed and maintained by **Koushik Deb**.
